@@ -15,9 +15,10 @@ TopFrame=tk.Frame(top,width=65)                         #用来布局使用
 
 WordEntry=tk.Entry(TopFrame,width=40)                   #创建一个单行文本框
 SearchBtn=tk.Button(TopFrame,text="Search",width=15)    #创建一个按钮
+
+ResultLabel=tk.Label(top,text='Nothing',height=15,width=65,bg='#FFFFDD',justify=tk.LEFT)    #创建一个显示标签
 modifyFrame=tk.Frame(top,width=65,height=15)   #修改界面布局
 addFrame=tk.Frame(top,width=65,height=16)   #添加界面布局
-ResultLabel=tk.Label(top,text='Nothing',height=15,width=65,bg='#FFFFDD',justify=tk.LEFT)    #创建一个显示标签
 
 def func1():
 
@@ -34,6 +35,7 @@ def func1():
     TopFrame.grid(row=0,column=0,padx=50)
     ResultLabel.grid(row=1,column=0)
     addFrame.grid_forget()
+    modifyFrame.grid_forget()
 
 def func2():
 
